@@ -1,29 +1,28 @@
 const router = require('express').Router();
-//const { Model } = require('sequelize/types');
 const { Tag, Product, ProductTag } = require('../../models');
 
 // The `/api/tags` endpoint
 
 router.get('/', (req, res) => {
-  // find all tags with associated Product data
+  //find all tags
+  //be sure to include its associated prodcut data
   Tag.findAll({
-    include: [
-      {
+    include: [{
         model: Product,
-        through: ProductTag,
-        as: 'productTag_product'
-      }
-    ]
+      }]
   })
-  .then(TagData => res.json(TagData))
+  .then(TagData => res.json(allTags))
   .catch(err => {
     console.log(err);
     res.status(500).json(err);
   });
 });
 
+
+
 router.get('/:id', (req, res) => {
-  // find a single tag by its `id` with associated Product data
+ // find a single tag by its `id`
+  // be sure to include its associated Product data
   Tag.findOne({
     where: {
       id: req.params.id
@@ -31,8 +30,6 @@ router.get('/:id', (req, res) => {
     include: [
       {
         model: Product,
-        through: ProductTag,
-        as: 'productTag_product'
       }
     ]
   })
@@ -48,6 +45,8 @@ router.get('/:id', (req, res) => {
     res.status(500).json(err);
   });
 });
+
+
 
 router.post('/', (req, res) => {
   // create a new tag
@@ -86,6 +85,8 @@ router.put('/:id', (req, res) => {
   });
 });
 
+
+
 router.delete('/:id', (req, res) => {
   // delete on tag by its `id` value
   Tag.destroy({
@@ -107,9 +108,3 @@ router.delete('/:id', (req, res) => {
 });
 
 module.exports = router;
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
