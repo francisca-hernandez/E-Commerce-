@@ -1,7 +1,7 @@
 # E-Commerce-Backend
 
 ## Description
-* This project is the creation of the back end for an e-commerce site. This application used Express.js API and Sequelize to interact with a MySQL database. This application displays creation of database using mySQL with models and associations. Then demonstrates the API Routes to perform RESTful CRUD operations displayed in my walk through videos.
+* This application uses Express.js API and Sequelize to interact with a MySQL database. IT displays a database using mySQL with models and associations. Then demonstrates the API Routes to perform RESTful CRUD operations displayed in my walk through videos.
 
 ## Acceptance Criteria
 * GIVEN a functional Express.js API
@@ -17,8 +17,8 @@
 * THEN I am able to successfully create, update, and delete data in my database
 
 ## Demo
-* View video to see MySQL walk through 
-* View video to walk through of the API routes
-* View video to see walk through via Insomnia 
+* Coming soon
+* View video to see MySQL walk through and API routes
 
 ## Deployed Link
+
