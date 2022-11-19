@@ -17,8 +17,8 @@
 * THEN I am able to successfully create, update, and delete data in my database
 
 ## Demo
-* Coming soon
-* View video to see MySQL walk through and API routes
+* Coming Soon
 
 ## Deployed Link
+https://francisca-hernandez.github.io/E-Commerce-Backend/
 
